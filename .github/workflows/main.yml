@@ -3,9 +3,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 env:
   RUST_VERSION_STABLE: 1.82.0
   CRATE_PATHS: .
@@ -23,8 +20,6 @@ jobs:
           profile: minimal
           components: rustfmt, clippy
           override: true
-      - name: Building
-        run: cargo build --release --all-targets
       - name: Checking
         run: cargo c
       - name: Testing
@@ -63,5 +58,7 @@ jobs:
           toolchain: ${{ env.RUST_VERSION_STABLE }}
           profile: minimal
           override: true
+      - name: Building
+        run: cargo build --release --all-targets
       - name: Publishing
         run: cargo publish -vv --all-features
