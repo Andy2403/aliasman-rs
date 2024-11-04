@@ -1,7 +1,9 @@
 use crate::{shell_utils::home, truncate_file};
 use curl::easy::Easy;
 use serde::{Deserialize, Serialize};
+use spinners::{Spinner, Spinners};
 use std::{fs::read_to_string, io::Write, path::Path};
+
 /// Information recived from curl of shells
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ShellInformation {
@@ -27,6 +29,11 @@ const CFG: &str = "/.aliasman.json";
 /// Load from the github repo
 ///
 fn load_from_git() -> String {
+    let mut sp = Spinner::new(
+        Spinners::Dots9,
+        "Downloading the configuration content".into(),
+    );
+
     let mut content = String::new();
     let mut easy = Easy::new();
     easy.url(REPO).expect("Error connecting to github");
@@ -46,6 +53,8 @@ fn load_from_git() -> String {
             .perform()
             .expect("Error in the Transfer perform action");
     }
+
+    sp.stop_with_message("✅ Already download the configuration content".to_string());
     content
 }
 /// Load content from the github repo or local json
@@ -73,11 +82,15 @@ pub fn load_content() -> ProgramInfo {
 pub fn update() -> String {
     let config_file = home() + CFG;
     let content = load_from_git();
-    let mut config_file = truncate_file(config_file.as_str()).expect("Unable to open config file");
 
+    let mut sp = Spinner::new(Spinners::Dots9, "Writing the configuration content".into());
+
+    let mut config_file = truncate_file(config_file.as_str()).expect("Unable to open config file");
     config_file
         .write_all(content.as_bytes())
         .expect("Error to write content");
     config_file.flush().expect("Error flushing datas");
+
+    sp.stop_with_message("✅ Already writed the configuration content".to_string());
     content
 }

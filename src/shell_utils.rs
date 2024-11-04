@@ -1,6 +1,6 @@
 use crate::create_file;
 use crate::proc::ProcessMan;
-use crate::updateable::{load_content, ShellInformation};
+use crate::updateable::{load_content, ProgramInfo, ShellInformation};
 use std::collections::HashMap;
 use std::sync::LazyLock;
 
@@ -12,8 +12,10 @@ pub struct ShellConfig {
     pub config_file: String,
 }
 
+/// Information getting from the global configuration
 static SHELLS_REMOTE: LazyLock<Vec<ShellInformation>> = LazyLock::new(load_content);
 
+/// Parsed shell informations
 static SHELLS_INFO: LazyLock<HashMap<String, &ShellInformation>> = LazyLock::new(|| {
     let mut m: HashMap<String, &ShellInformation> = HashMap::new();
 

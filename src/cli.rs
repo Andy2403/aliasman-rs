@@ -69,22 +69,13 @@ impl Default for Program {
     }
 }
 
-fn fprint(p: &mut Printer, content: &str) {
-    p.writeln(content).expect("Error writing information");
-}
-
 impl Program {
     /// Create a new program instance
     /// # Panics
     /// On creation of the `AliasMan` maybe panic
     pub fn new() -> Self {
         let aman = setup_aliasman().expect("Error on setup");
-        let mut printer = Printer::new();
-
-        fprint(
-            &mut printer,
-            &format!("Detected Shell: {}", get_shell().as_str()),
-        );
+        let printer = Printer::new();
 
         Self {
             aliasman: aman,
