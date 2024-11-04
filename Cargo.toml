@@ -14,6 +14,9 @@ repository = "https://github.com/Andy2403/aliasman-rs"
 [badges]
 maintenance = { status = "actively-developed" }
 
+[build-dependencies]
+dotenv-build = "0.1.1"
+
 [dependencies]
 anyhow = "1.0.86"
 clap = { version = "4.5.16", features = ["derive"] }
