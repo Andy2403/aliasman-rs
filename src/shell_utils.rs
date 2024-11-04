@@ -17,7 +17,7 @@ static SHELLS_REMOTE: LazyLock<Vec<ShellInformation>> = LazyLock::new(load_conte
 static SHELLS_INFO: LazyLock<HashMap<String, &ShellInformation>> = LazyLock::new(|| {
     let mut m: HashMap<String, &ShellInformation> = HashMap::new();
 
-    let arr = &*SHELLS_REMOTE;
+    let arr = &*SHELLS_REMOTE.shells;
 
     for info in arr {
         m.insert((*info.name).to_string(), info);

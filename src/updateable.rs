@@ -2,7 +2,7 @@ use crate::{shell_utils::home, truncate_file};
 use curl::easy::Easy;
 use serde::{Deserialize, Serialize};
 use std::{fs::read_to_string, io::Write, path::Path};
-/// Information recived from curl
+/// Information recived from curl of shells
 #[derive(Debug, Serialize, Deserialize)]
 pub struct ShellInformation {
     /// The name of the shell
@@ -12,8 +12,18 @@ pub struct ShellInformation {
     /// the name or path from HOME to alias file
     pub alias: String,
 }
+
+/// Information recived from curl
+#[derive(Debug, Serialize, Deserialize)]
+pub struct ProgramInfo {
+    /// Version stable
+    pub stable: String,
+    /// Shells configurations
+    pub shells: Vec<ShellInformation>,
+}
+
 const REPO: &str = "https://raw.githubusercontent.com/garcia-andy/aliasman-rs/main/shells.json";
-const CFG: &str = "/.aliasman.cfg";
+const CFG: &str = "/.aliasman.json";
 /// Load from the github repo
 ///
 fn load_from_git() -> String {
@@ -43,7 +53,7 @@ fn load_from_git() -> String {
 /// Error connecting to github or reading the conf file
 /// # Panics
 /// Panic on any error
-pub fn load_content() -> Vec<ShellInformation> {
+pub fn load_content() -> ProgramInfo {
     let config_file = home() + CFG;
 
     let content = if Path::new(config_file.as_str()).exists() {
