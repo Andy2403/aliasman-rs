@@ -31,24 +31,30 @@ Maneja tus alias de forma fácil y rapida.
 
 ## Cómo usarse
 
-El funcionamiento de AliasMan se basa en 4 comandos:
+El funcionamiento de AliasMan se basa en estos comandos:
 
-1. Add
+1. Add: para agregar un alias no existente
 ```shell
 aliasman add hello echo "Hello World"
 ```
-2. Remove or Rm
+2. Remove o Rm: para quitar un alias previamente creado
 ```shell
 aliasman remove hello
 aliasman rm hello
 ```
-3. Replace
+3. Replace o Edit: para cambiar el comando a ejecutar de un alias
 ```shell
 aliasman replace hello echo "Hello!"
+aliasman edit hello echo "Hello!"
 ```
-4. List
+4. List: muestra un listado de todos los alias
 ```shell
 aliasman list
+```
+## Ahora ya no se tendrá que actualizar el paquete para añadir soporte a otras terminales
+5. ⭐ Update: descarga el archivo de configuración desde github
+```shell
+aliasman update
 ```
 
 ## Soporte de terminales
