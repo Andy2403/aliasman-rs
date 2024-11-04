@@ -84,4 +84,10 @@ aliasman update
 Siéntete libre de abrir una issue o si necesita
 más información lea [CONTRIBUTING.md].
 
+## Cargo Install
+Para instalar este paquete, si estas en linux (Ubuntu) necesitarás tener estos paquetes
+o los equivalentes en tu distro: pkg-config libssl-dev libudev-dev
+
+De presentarse algún problema, por favor informelo mediante una issue siguiendo siempre el [CONTRIBUTING.md].
+
 [CONTRIBUTING.md]: https://github.com/Andy2403/aliasman-rs/blob/master/CONTRIBUTING.md

@@ -2,3 +2,4 @@
 Cargo.lock
 .gitkey*
 *.sh
+.env
