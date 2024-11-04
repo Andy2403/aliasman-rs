@@ -12,7 +12,7 @@ pub struct ShellConfig {
     pub config_file: String,
 }
 
-static SHELLS_REMOTE: LazyLock<Vec<ShellInformation>> = LazyLock::new(|| load_content());
+static SHELLS_REMOTE: LazyLock<Vec<ShellInformation>> = LazyLock::new(load_content);
 
 static SHELLS_INFO: LazyLock<HashMap<String, &ShellInformation>> = LazyLock::new(|| {
     let mut m: HashMap<String, &ShellInformation> = HashMap::new();
@@ -44,12 +44,12 @@ pub fn home() -> String {
 /// Getting the name of the config & alias file
 /// # Panics
 /// Panic on getting env var
-pub fn get_info(name: String) -> [String; 2] {
+pub fn get_info(name: &str) -> [String; 2] {
     let homedir = home();
     let homedir = std::env::var("HOME")
         .expect("We required the $HOME Path for determinate the shell config file!");
     let cfg = (*SHELLS_INFO)
-        .get(name.as_str())
+        .get(name)
         .expect("Shell configuration file not found!");
 
     let cfg_file = format!("{homedir}/{}", cfg.config);

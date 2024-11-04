@@ -1,3 +1,4 @@
+//! The main library
 /// Crate with alias features
 pub mod alias;
 /// Crate with CLI options and features
@@ -79,7 +80,7 @@ impl Printer {
 /// # Errors
 /// First error on `read_to_string`
 pub fn setup_aliasman() -> Result<AliasMan> {
-    let [cfg, alias] = get_info(get_shell());
+    let [cfg, alias] = get_info(get_shell().as_str());
 
     if Path::new(cfg.as_str()).exists() {
         let bash_content = read_to_string(cfg.as_str())?;
