@@ -18,7 +18,6 @@ use alias::AliasMan;
 use anyhow::{Ok, Result};
 use file_utils::*;
 use shell_utils::{get_info, get_shell};
-use shell_utils::{get_shell_aliases, get_shell_config_file};
 use std::{
     fs::read_to_string,
     io::{self, BufWriter, Stderr, Stdout, Write},

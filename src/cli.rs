@@ -1,8 +1,6 @@
 use crate::{
     alias::{Alias, AliasMan},
-    setup_aliasman,
-    shell_utils::get_shell,
-    updateable, Printer,
+    setup_aliasman, updateable, Printer,
 };
 use clap::{Parser, Subcommand};
 

@@ -13,7 +13,7 @@ pub struct ShellConfig {
 }
 
 /// Information getting from the global configuration
-static SHELLS_REMOTE: LazyLock<Vec<ShellInformation>> = LazyLock::new(load_content);
+static SHELLS_REMOTE: LazyLock<ProgramInfo> = LazyLock::new(load_content);
 
 /// Parsed shell informations
 static SHELLS_INFO: LazyLock<HashMap<String, &ShellInformation>> = LazyLock::new(|| {
@@ -48,8 +48,6 @@ pub fn home() -> String {
 /// Panic on getting env var
 pub fn get_info(name: &str) -> [String; 2] {
     let homedir = home();
-    let homedir = std::env::var("HOME")
-        .expect("We required the $HOME Path for determinate the shell config file!");
     let cfg = (*SHELLS_INFO)
         .get(name)
         .expect("Shell configuration file not found!");
