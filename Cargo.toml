@@ -2,14 +2,14 @@
 name = "aliasman"
 version = "1.1.3"
 edition = "2021"
-readme = "README.md"    
+readme = "README.md"
 authors = ["Andy Garcia <agf030124@gmail.com>"]
 license-file = "LICENSE.md"
 description = """A simple tool for manage your aliasses"""
 keywords = ["utility","tool", "aliasses", "alias", "linux"]
 categories = ["command-line-interface","command-line-utilities","config"]
-homepage = "https://github.com/garcia-andy/aliasman-rs"
-repository = "https://github.com/garcia-andy/aliasman-rs"
+homepage = "https://github.com/Andy2403/aliasman-rs"
+repository = "https://github.com/Andy2403/aliasman-rs"
 
 [badges]
 maintenance = { status = "actively-developed" }
@@ -22,7 +22,7 @@ sysinfo = "0.31.2"
 [package.metadata.deb]
 maintainer = "Andy Garcia <agf030124@gmail.com>"
 copyright = "2024, Andy Garcia <agf030124@gmail.com>"
-license-file = "LICENSE.md"
+license = "MIT"
 extended-description = """A simple tool for manage your aliasses"""
 depends = "$auto"
 section = "utility"
