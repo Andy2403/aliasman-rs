@@ -10,10 +10,13 @@ pub mod proc;
 pub mod shell_utils;
 /// Crate with string utilities
 pub mod string_utils;
+/// Crate with update features
+pub mod updateable;
 
 use alias::AliasMan;
 use anyhow::{Ok, Result};
 use file_utils::*;
+use shell_utils::{get_info, get_shell};
 use shell_utils::{get_shell_aliases, get_shell_config_file};
 use std::{
     fs::read_to_string,
@@ -76,26 +79,23 @@ impl Printer {
 /// # Errors
 /// First error on `read_to_string`
 pub fn setup_aliasman() -> Result<AliasMan> {
-    let bash = get_shell_config_file();
-    let alias = get_shell_aliases();
-    let p = Path::new(bash.as_str());
+    let [cfg, alias] = get_info(get_shell());
 
-    if p.exists() {
-        let bash_content = read_to_string(bash.as_str())?;
+    if Path::new(cfg.as_str()).exists() {
+        let bash_content = read_to_string(cfg.as_str())?;
 
         if !bash_content.contains(alias.as_str()) {
-            let import_content = if bash.contains("fish") {
+            let import_content = if cfg.contains("fish") {
                 "\nsource "
             } else {
                 "\n. "
             };
 
-            let mut bash = mod_file(bash.as_str())?;
+            let mut bash = mod_file(cfg.as_str())?;
             bash.write_all(import_content.as_bytes())?;
             bash.write_all(alias.as_bytes())?;
         }
     }
 
-    create_file(alias.as_str())?;
     Ok(AliasMan::new(alias.as_str()))
 }
