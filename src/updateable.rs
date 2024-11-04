@@ -24,7 +24,7 @@ pub struct ProgramInfo {
     pub shells: Vec<ShellInformation>,
 }
 
-const REPO: &str = "https://raw.githubusercontent.com/garcia-andy/aliasman-rs/main/shells.json";
+const REPO: &str = "http://raw.githubusercontent.com/garcia-andy/aliasman-rs/main/shells.json";
 const CFG: &str = "/.aliasman.json";
 /// Load from the github repo
 ///
