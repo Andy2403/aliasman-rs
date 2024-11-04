@@ -1,0 +1,17 @@
+[
+  {
+    "name": "bash",
+    "config": ".bashrc",
+    "alias": ".aliasman"
+  },
+  {
+    "name": "zsh",
+    "config": ".zshrc",
+    "alias": ".aliasman"
+  },
+  {
+    "name": "fish",
+    "config": ".config/fish/conf.fish",
+    "alias": ".config/fish/conf.d/aliases.fish"
+  }
+]
