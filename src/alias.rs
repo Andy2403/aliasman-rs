@@ -25,7 +25,7 @@ impl AliasMan {
         // read aliases file content
         let aliases = read_to_string(file).expect("Unavle to read the aliases config file");
         // vec of lines
-        let aliases_vec: Vec<&str> = aliases.split(|c| c == '\n').collect();
+        let aliases_vec: Vec<&str> = aliases.split(['\n']).collect();
 
         // objects to save
         let mut aliases_objs: Vec<Alias> = vec![];

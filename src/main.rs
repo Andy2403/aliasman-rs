@@ -1,6 +1,6 @@
 //! The Main process
-use aliasman::cli::{Cli, Program};
 use clap::Parser;
+use ohmyalias::cli::{Cli, Program};
 
 fn main() {
     let cli = Cli::parse();

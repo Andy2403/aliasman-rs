@@ -11,13 +11,13 @@ pub struct ProcessMan<'a> {
     sys: &'a System,
 }
 
-impl<'a> Default for ProcessMan<'a> {
+impl Default for ProcessMan<'_> {
     fn default() -> Self {
         Self::new()
     }
 }
 
-impl<'a> ProcessMan<'a> {
+impl ProcessMan<'_> {
     /// Create a new Instance of the `ProcessMan` &
     /// use the singleton object System
     pub fn new() -> Self {
@@ -109,7 +109,7 @@ impl<'a> ProcessMan<'a> {
     }
 }
 
-impl<'a> Clone for ProcessMan<'a> {
+impl Clone for ProcessMan<'_> {
     fn clone(&self) -> Self {
         Self { sys: self.sys }
     }
