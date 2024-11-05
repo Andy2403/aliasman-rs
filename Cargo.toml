@@ -35,5 +35,5 @@ depends = "$auto"
 section = "utility"
 priority = "optional"
 assets = [
- ["target/release/aliasman", ".", "755"],
+ ["target/release/ohmyalias", ".", "755"],
 ]
