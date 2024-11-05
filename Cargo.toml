@@ -13,7 +13,6 @@ repository = "https://github.com/Andy2403/aliasman-rs"
 
 [badges]
 maintenance = { status = "actively-developed" }
-
 [build-dependencies]
 dotenv-build = "0.1.1"
 
