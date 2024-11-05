@@ -35,11 +35,13 @@ impl AliasMan {
                 continue;
             }
             // separete items
-            let strs: Vec<&str> = line.split('=').collect();
+            let (name, cmd) = line
+                .split_once('=')
+                .expect("Error parsing line of aliasses");
             // getting the alias name
-            let alias_name = remove_init(strs[0], "alias ");
+            let alias_name = remove_init(name, "alias ");
             // getting the command (without the " or ')!
-            let alias_cmd = remove_both(strs[1], "'");
+            let alias_cmd = remove_both(cmd, "'");
 
             aliases_objs.push(Alias(alias_name, alias_cmd));
         }

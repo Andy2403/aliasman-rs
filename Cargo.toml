@@ -1,6 +1,6 @@
 [package]
 name = "ohmyalias"
-version = "1.2.0"
+version = "1.2.5"
 edition = "2021"
 readme = "README.md"
 authors = ["Andy Garcia <agf030124@gmail.com>"]
