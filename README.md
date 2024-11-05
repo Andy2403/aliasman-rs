@@ -27,9 +27,6 @@ Licensias:
 
 ![Crates.io Dependents](https://img.shields.io/crates/dependents/ohmyalias)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/Andy2403/aliasman-rs/main.yml)
-[![Docs.rs](https://img.shields.io/docsrs/ohmyalias)](https://docs.rs/crate/ohmyalias)
-![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/Andy2403/aliasman-rs/total)
-![GitHub Release](https://img.shields.io/github/v/release/Andy2403/aliasman-rs?style=flat)
 
 ## Que hay de nuevo en la 1.2?
 En esta última versión he puesto el foco en:

@@ -1,10 +1,10 @@
 [package]
 name = "ohmyalias"
-version = "1.2.5"
+version = "1.2.6"
 edition = "2021"
 readme = "README.md"
 authors = ["Andy Garcia <agf030124@gmail.com>"]
-license-file = "LICENSE.md"
+license = "MIT"
 description = """A simple tool for manage your aliasses"""
 keywords = ["utility","tool", "aliasses", "alias", "linux"]
 categories = ["command-line-interface","command-line-utilities","config"]
