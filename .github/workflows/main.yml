@@ -4,7 +4,7 @@ on:
     branches:
       - main
 concurrency:
-  group: production
+  group: dev
   cancel-in-progress: true
 env:
   RUST_VERSION_STABLE: 1.82.0
