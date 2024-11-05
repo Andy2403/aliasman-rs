@@ -5,35 +5,31 @@ Estado actual:
 
 Licensias:
 
-![Crates.io License](https://img.shields.io/crates/l/aliasman)
+![Crates.io License](https://img.shields.io/crates/l/ohmyalias)
 ![GitHub License](https://img.shields.io/github/license/Andy2403/aliasman-rs)
 
 🌟 Gracias a todos
 
-![Crates.io Total Downloads](https://img.shields.io/crates/d/aliasman)
-![Crates.io Downloads (latest version)](https://img.shields.io/crates/dv/aliasman)
+![Crates.io Total Downloads](https://img.shields.io/crates/d/ohmyalias)
+![Crates.io Downloads (latest version)](https://img.shields.io/crates/dv/ohmyalias)
 
 ![Dynamic TOML Badge](https://img.shields.io/badge/dynamic/toml?url=https%3A%2F%2Fraw.githubusercontent.com%2FAndy2403%2Faliasman-rs%2Fmain%2FCargo.toml&query=%24.package.version&style=flat&label=In%20Dev%20Version)
-[![Crates.io](https://img.shields.io/crates/v/aliasman.svg)](https://crates.io/crates/aliasman)
+[![Crates.io](https://img.shields.io/crates/v/ohmyalias.svg)](https://crates.io/crates/ohmyalias)
 
 ## Estado en GitHub:
 
 ![GitHub User's stars](https://img.shields.io/github/stars/Andy2403?style=flat)
-![GitHub watchers](https://img.shields.io/github/watchers/Andy2403/aliasman-rs?style=flat)
-[![Lines of code](https://tokei.rs/b1/github/Andy2403/aliasman-rs?category=code)](https://github.com/Andy2403/aliasman-rs)
-![Crates.io Size](https://img.shields.io/crates/size/aliasman)
-![GitHub repo size](https://img.shields.io/github/repo-size/Andy2403/aliasman-rs)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/Andy2403/aliasman-rs)
-![GitHub Issues or Pull Requests](https://img.shields.io/github/issues-pr/Andy2403/aliasman-rs)
-![Crates.io Dependents](https://img.shields.io/crates/dependents/aliasman)
-![GitHub Created At](https://img.shields.io/github/created-at/Andy2403/aliasman-rs)
-![GitHub contributors](https://img.shields.io/github/contributors/Andy2403/aliasman-rs)
-![GitHub last commit (branch)](https://img.shields.io/github/last-commit/Andy2403/aliasman-rs/main)
+
+[![Lines of code](https://tokei.rs/b1/github/Andy2403/aliasman-rs?category=code)](https://github.com/Andy2403/aliasman-rs)
+![Crates.io Size](https://img.shields.io/crates/size/ohmyalias)
+![GitHub repo size](https://img.shields.io/github/repo-size/Andy2403/aliasman-rs)
+
+![Crates.io Dependents](https://img.shields.io/crates/dependents/ohmyalias)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/Andy2403/aliasman-rs/main.yml)
-[![Docs.rs](https://img.shields.io/docsrs/aliasman)](https://docs.rs/crate/aliasman)
+[![Docs.rs](https://img.shields.io/docsrs/ohmyalias)](https://docs.rs/crate/ohmyalias)
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/Andy2403/aliasman-rs/total)
 ![GitHub Release](https://img.shields.io/github/v/release/Andy2403/aliasman-rs?style=flat)
-![GitHub Tag](https://img.shields.io/github/v/tag/Andy2403/aliasman-rs)
 
 ## Que hay de nuevo en la 1.2?
 En esta última versión he puesto el foco en:
